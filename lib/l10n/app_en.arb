@@ -1,0 +1,195 @@
+{
+  "@@locale": "en",
+  "appTitle": "Trackie",
+  "tabToday": "Today",
+  "tabCalendar": "Calendar",
+  "tabInsights": "Insights",
+  "tabSettings": "Settings",
+  "newTask": "New task",
+  "editTask": "Edit task",
+  "fieldTitle": "Title",
+  "fieldDate": "Date",
+  "fieldTime": "Time",
+  "fieldDuration": "Duration",
+  "fieldNotes": "Notes",
+  "fieldPriority": "Priority",
+  "fieldRepeat": "Repeat",
+  "fieldReminders": "Reminders",
+  "priorityLow": "Low",
+  "priorityNormal": "Normal",
+  "priorityHigh": "High",
+  "repeatNone": "Does not repeat",
+  "repeatDaily": "Every day",
+  "repeatWeekdays": "Weekdays (Mon–Fri)",
+  "repeatWeekly": "Every week",
+  "repeatMonthly": "Every month",
+  "reminderAtStart": "At start",
+  "reminderBefore": "{minutes} min before",
+  "@reminderBefore": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "durationMinutes": "{minutes} min",
+  "@durationMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "undo": "Undo",
+  "titleRequired": "Enter a title",
+  "applyToWhich": "Apply to which events?",
+  "onlyThisOne": "Only this one",
+  "wholeSeries": "All events in the series",
+  "actionDone": "Done",
+  "actionSkip": "Skip",
+  "statusDone": "Done",
+  "statusSkipped": "Skipped",
+  "statusMissed": "Missed",
+  "markedDone": "Marked done",
+  "markedSkipped": "Skipped",
+  "emptyTodayTitle": "Nothing planned today",
+  "emptyTodayBody": "Tap + to add your first task.",
+  "nextUp": "Next up",
+  "comingSoon": "Coming in a later version",
+  "settingLanguage": "Language",
+  "settingCalendar": "Calendar",
+  "calendarGregorian": "Gregorian",
+  "calendarEthiopian": "Ethiopian",
+  "enableNotifications": "Allow reminders",
+  "enableNotificationsBody": "Trackie needs permission to alert you at the exact time of each task.",
+  "statusPending": "Planned",
+  "actionSnooze": "Snooze",
+  "snoozeMinutes": "{minutes} min",
+  "@snoozeMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "snoozedFor": "Reminder snoozed for {minutes} min",
+  "@snoozedFor": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "actionReschedule": "Reschedule",
+  "actionEdit": "Edit",
+  "actionReset": "Mark as not done",
+  "rescheduled": "Moved to {time}",
+  "@rescheduled": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "projectedNote": "This is a future repeat of the series. Edit the series to change it.",
+  "editSeries": "Edit series",
+  "timeRange": "{start} – {end}",
+  "@timeRange": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "fieldCategory": "Category",
+  "categoryNone": "No category",
+  "viewWeek": "Week",
+  "viewMonth": "Month",
+  "previous": "Previous",
+  "next": "Next",
+  "goToToday": "Today",
+  "noTasks": "No tasks",
+  "moreCount": "+{count} more",
+  "@moreCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "categoriesTitle": "Categories",
+  "newCategory": "New category",
+  "editCategory": "Edit category",
+  "fieldName": "Name",
+  "fieldColor": "Colour",
+  "fieldIcon": "Icon",
+  "nameRequired": "Enter a name",
+  "noCategories": "No categories yet. Tap + to add one.",
+  "deleteCategoryTitle": "Delete \"{name}\"?",
+  "@deleteCategoryTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteCategoryBody": "Its tasks will be kept without a category.",
+  "sectionReminders": "Reminders",
+  "sectionGeneral": "General",
+  "sectionData": "Your data",
+  "remindersReady": "Reminders are set up to arrive on time.",
+  "remindersAttention": "Some settings may delay or block your reminders.",
+  "permNotificationsTitle": "Notifications",
+  "permNotificationsBody": "Needed to show reminders.",
+  "permExactTitle": "Alarms & reminders",
+  "permExactBody": "Lets reminders arrive on the exact minute.",
+  "permBatteryTitle": "Battery: unrestricted",
+  "permBatteryBody": "Some phones stop reminders to save battery. In the list, set Trackie to \"Unrestricted\" or \"Don't optimise\".",
+  "autostartTitle": "Auto-start",
+  "autostartBody": "On {maker} phones, also open the app settings and allow Trackie to auto-start and run in the background.",
+  "@autostartBody": {
+    "placeholders": {
+      "maker": {
+        "type": "String"
+      }
+    }
+  },
+  "permAllow": "Allow",
+  "permOpenSettings": "Open settings",
+  "permGranted": "Allowed",
+  "settingDefaultReminder": "Default reminder",
+  "settingTheme": "Theme",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "deleteAllData": "Delete all data",
+  "deleteAllDataBody": "Removes every task, its history and your settings from this phone. This can't be undone.",
+  "deleteEverything": "Delete everything",
+  "onboardingWelcomeTitle": "Plan your day. Get reminded on time.",
+  "onboardingWelcomeBody": "Choose your language and calendar. You can change them later in Settings.",
+  "onboardingRemindersTitle": "Make reminders reliable",
+  "onboardingRemindersBody": "Trackie hands each reminder to your phone so it fires even when the app is closed. Allow these so nothing is missed.",
+  "continueButton": "Continue",
+  "getStarted": "Get started",
+  "back": "Back",
+  "semanticsOccurrence": "{title}, {time}, {status}",
+  "@semanticsOccurrence": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  }
+}
