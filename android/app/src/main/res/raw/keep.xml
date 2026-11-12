@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Release builds shrink unused resources. These are referenced only by
+     name from Dart (flutter_local_notifications), so R8 cannot see them;
+     without this file notifications can silently fail to show. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_stat_notification,@mipmap/ic_launcher" />
