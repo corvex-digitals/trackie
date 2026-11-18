@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../features/calendar/presentation/calendar_screen.dart';
-import '../features/insights/presentation/insights_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
 import '../features/tasks/presentation/task_editor_screen.dart';
 import '../features/today/presentation/today_screen.dart';
 import '../l10n/app_localizations.dart';
 
-/// Bottom navigation with four tabs and a quick-add button on every tab
+/// Bottom navigation with three tabs and a quick-add button on every tab
 /// (section 8).
 class HomeShell extends StatefulWidget {
   const HomeShell({super.key});
@@ -22,7 +21,8 @@ class _HomeShellState extends State<HomeShell> {
   static const _tabs = [
     TodayScreen(),
     CalendarScreen(),
-    InsightsScreen(),
+    // Insights (FR-17) is version 2; its screen is kept in
+    // lib/features/insights/ and returns here when it's built.
     SettingsScreen(),
   ];
 
@@ -48,10 +48,6 @@ class _HomeShellState extends State<HomeShell> {
               icon: const Icon(Icons.calendar_month_outlined),
               selectedIcon: const Icon(Icons.calendar_month),
               label: l.tabCalendar),
-          NavigationDestination(
-              icon: const Icon(Icons.insights_outlined),
-              selectedIcon: const Icon(Icons.insights),
-              label: l.tabInsights),
           NavigationDestination(
               icon: const Icon(Icons.settings_outlined),
               selectedIcon: const Icon(Icons.settings),

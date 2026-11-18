@@ -106,6 +106,50 @@ natural-language input, calendar import/export, location reminders.
   speaker.
 - **Device testing** on Samsung, Tecno, Infinix and Xiaomi with battery saver
   on is still the only way to verify NFR-01.
-- **Release setup** is still to do: upload keystore and signing, final
-  application ID, app icon and splash screen, a schema snapshot before the
-  first release (`dart run drift_dev schema dump`), and Crashlytics.
+- **Release setup still to do:** final application ID, app icon and splash
+  screen, the schema snapshot (see below), and a crash reporter behind
+  `reportError` in `lib/core/errors/error_reporting.dart`. Insights (FR-17)
+  is hidden from the navigation until version 2.
+
+## Releasing
+
+### Android signing
+
+Create the upload keystore once and back it up somewhere safe. Losing it
+means you can no longer publish updates.
+
+```bash
+keytool -genkey -v -keystore ~/trackie-upload.jks -keyalg RSA \
+  -keysize 2048 -validity 10000 -alias upload
+```
+
+Then create `android/key.properties`, which is git-ignored:
+
+```properties
+storePassword=...
+keyPassword=...
+keyAlias=upload
+storeFile=/home/you/trackie-upload.jks
+```
+
+Build with `flutter build appbundle --release` and upload
+`build/app/outputs/bundle/release/app-release.aab`. Without
+`key.properties` the release build is signed with the debug key (Gradle
+prints a warning), and Play Console rejects it.
+
+### Database schema snapshots
+
+Before each release that changes `tables.dart`, and once before the first
+release, save the schema so later migrations can be written and tested:
+
+```bash
+dart run drift_dev schema dump lib/core/database/app_database.dart drift_schemas/drift_schema_v1.json
+```
+
+`drift_dev` must be the same release as `drift`, because a mismatch breaks
+this command. Run `flutter pub upgrade drift_dev` first if it fails.
+
+### Version numbers
+
+Raise the build number (`+N` in `pubspec.yaml`'s `version`) on every
+upload to either store.

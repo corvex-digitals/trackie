@@ -20,6 +20,7 @@ import 'package:trackie/features/settings/presentation/settings_screen.dart';
 import 'package:trackie/features/tasks/data/task_repository.dart';
 import 'package:trackie/features/tasks/domain/task_draft.dart';
 import 'package:trackie/features/tasks/presentation/task_editor_screen.dart';
+import 'package:trackie/features/today/presentation/day_timeline.dart';
 import 'package:trackie/features/today/presentation/today_screen.dart';
 import 'package:trackie/l10n/app_localizations.dart';
 
@@ -156,7 +157,12 @@ void main() {
     await tester.pumpWidget(host(const TodayScreen()));
     await settle(tester);
 
-    expect(find.textContaining('Standup', findRichText: true), findsOneWidget);
+    // Look inside the timeline only: before 9:00 the "next up" card also
+    // shows Standup, which would make this test depend on the time of day.
+    Finder inTimeline(String text) => find.descendant(
+        of: find.byType(DayTimeline),
+        matching: find.textContaining(text, findRichText: true));
+    expect(inTimeline('Standup'), findsOneWidget);
     expect(find.textContaining('Tomorrow only', findRichText: true), findsNothing);
     await tester.pumpWidget(const SizedBox());
   });
